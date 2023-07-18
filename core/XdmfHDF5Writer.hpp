@@ -34,7 +34,12 @@
 #ifndef _H5Ipublic_H
   #ifndef XDMF_HID_T
   #define XDMF_HID_T
-    typedef int hid_t;
+    #ifndef XDMF_HID_T_64
+      typedef int hid_t;
+    #else
+      #include <stdint.h>
+      typedef int64_t hid_t;
+    #endif
   #endif
 #endif
 

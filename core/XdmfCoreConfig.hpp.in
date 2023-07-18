@@ -29,9 +29,10 @@
 
 #cmakedefine BUILD_SHARED
 #ifndef BUILD_SHARED
-#  define XDMFSTATIC
+#define XDMFSTATIC
 #endif
 
 #cmakedefine XDMF_NO_REALPATH
+#cmakedefine XDMF_HID_T_64
 
 #endif /* XDMFCORECONFIG_HPP_ */

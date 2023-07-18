@@ -33,6 +33,15 @@ Brief instructions for building XDMF from source code:
      cmake .. -DCMAKE_INSTALL_PREFIX=${XDMF_INSTALL_DIR} \
               -DBUILD_SHARED_LIBS=1 -DXDMF_WRAP_PYTHON=1 -Wno-dev
      ```
+     
+     For HAWK, we can use:
+     
+     ```sh
+     export XDMF_INSTALL_DIR=~/opt/Xdmf/
+     cmake .. -DCMAKE_INSTALL_PREFIX=${XDMF_INSTALL_DIR} \
+              -DBUILD_SHARED_LIBS=1 -DXDMF_WRAP_JAVA=OFF \
+              -DXDMF_WRAP_PYTHON=OFF -DXDMF_BUILD_TESTING=OFF -Wno-dev
+     ```
 
 * Build and install XDMF:
 

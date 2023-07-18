@@ -29,6 +29,9 @@ find_package(HDF5 REQUIRED)
 if(HDF5_FOUND)
   include_directories(${HDF5_INCLUDE_DIRS})
   include_directories(${HDF5_C_INCLUDE_DIR})
+  if(HDF5_VERSION VERSION_GREATER_EQUAL "1.10.0")
+      set(XDMF_HID_T_64 TRUE)
+  endif()
   # FIXME: Would like to get this info from HDF5 so we don't have conflicting
   # MPI versions
   if(HDF5_IS_PARALLEL)
